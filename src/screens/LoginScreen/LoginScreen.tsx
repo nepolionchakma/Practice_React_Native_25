@@ -19,6 +19,7 @@ const LoginScreen = () => {
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
       }}>
       {!isSignUp && (
         <View
@@ -29,7 +30,7 @@ const LoginScreen = () => {
             alignItems: 'center',
           }}>
           <Text style={styles.loginText}>Login Here</Text>
-          <Text>Welcome back!</Text>
+          <Text style={{color: 'black'}}>Welcome back!</Text>
           <View style={{width: '80%', marginTop: 20, gap: 10}}>
             <TextInput
               inputMode="text"
@@ -63,6 +64,7 @@ const LoginScreen = () => {
               style={{
                 backgroundColor: 'transparent',
               }}
+              variant="secondary"
             />
             <SocialLogin />
           </View>
@@ -79,6 +81,7 @@ const styles = StyleSheet.create({
   loginText: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#2188ff',
   },
   inputField: {
     borderWidth: 1,
@@ -87,5 +90,6 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '100%',
     height: 60,
+    backgroundColor: '#b6b7ba',
   },
 });

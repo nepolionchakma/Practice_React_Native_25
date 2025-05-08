@@ -54,6 +54,7 @@ const SignUpScreen = ({goBack}: SignUpScreenProps) => {
           style={{
             backgroundColor: 'transparent',
           }}
+          variant="secondary"
         />
         <SocialLogin />
       </View>
@@ -64,7 +65,7 @@ const SignUpScreen = ({goBack}: SignUpScreenProps) => {
 export default SignUpScreen;
 
 const styles = StyleSheet.create({
-  signUpText: {fontSize: 20, fontWeight: 'bold'},
+  signUpText: {fontSize: 20, fontWeight: 'bold', color: '#2188ff'},
   inputField: {
     borderWidth: 1,
     borderRadius: 5,
@@ -72,5 +73,6 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '100%',
     height: 60,
+    backgroundColor: '#b6b7ba',
   },
 });

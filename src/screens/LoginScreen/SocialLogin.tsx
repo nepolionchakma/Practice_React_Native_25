@@ -7,7 +7,9 @@ import Twitter from '../../Assets/img/icons8-twitter-24.png';
 const SocialLogin = () => {
   return (
     <View style={{alignItems: 'center', marginTop: 30}}>
-      <Text style={{marginTop: 20, marginBottom: 10}}>Or continue with</Text>
+      <Text style={{marginTop: 20, marginBottom: 10, color: 'black'}}>
+        Or continue with
+      </Text>
       <View
         style={{
           flexDirection: 'row',
@@ -31,5 +33,8 @@ const SocialLogin = () => {
 export default SocialLogin;
 
 const styles = StyleSheet.create({
-  button: {backgroundColor: 'gray'},
+  button: {
+    backgroundColor: 'gray',
+    width: 65,
+  },
 });
