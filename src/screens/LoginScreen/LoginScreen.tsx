@@ -10,9 +10,15 @@ import React, {useState} from 'react';
 import Button from '../../components/Button/Button';
 import SignUpScreen from '../SignUpScreen/SignUpScreen';
 import SocialLogin from './SocialLogin';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../../Types/Types';
 
-const LoginScreen = () => {
+interface LoginScreenProps {
+  navigation: StackNavigationProp<RootStackParamList, 'LoginScreen'>;
+}
+const LoginScreen = ({navigation}: LoginScreenProps) => {
   const [isSignUp, setIsSignUp] = useState(false);
+  // const {navigate} = useNavigation();
   return (
     <ScrollView
       contentContainerStyle={{
@@ -57,7 +63,7 @@ const LoginScreen = () => {
                 <Text style={{color: 'white'}}>Forget your password?</Text>
               </TouchableOpacity>
             </View>
-            <Button title="Login" />
+            <Button title="Login" onPress={() => navigation.navigate('Home')} />
             <Button
               onPress={() => setIsSignUp(true)}
               title="Create a account"
