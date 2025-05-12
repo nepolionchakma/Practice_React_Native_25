@@ -3,8 +3,8 @@ import React from 'react';
 import LoginScreen from './src/screens/LoginScreen/LoginScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import {RootStackParamList} from './src/Types/Types';
+import HomeTabNavigatore from './src/screens/HomeScreen/HomeTabNavigatore';
 
 const App = () => {
   const Stack = createStackNavigator<RootStackParamList>();
@@ -12,7 +12,13 @@ const App = () => {
   return (
     <ScrollView contentContainerStyle={{flexGrow: 1}}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="LoginScreen">
+        <Stack.Navigator
+          initialRouteName="Home"
+          // screenOptions={{
+          //   headerShown: false,
+          //   headerStyle: {backgroundColor: 'tomato'},
+          // }}
+        >
           <Stack.Screen
             name="LoginScreen"
             component={LoginScreen}
@@ -20,7 +26,7 @@ const App = () => {
           />
           <Stack.Screen
             name="Home"
-            component={HomeScreen}
+            component={HomeTabNavigatore}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

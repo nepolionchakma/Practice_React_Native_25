@@ -1,3 +1,15 @@
+#### Create a project
+
+```bash
+npx react-native@0.73.6 init AwesomeProject --version 0.73.6
+```
+
+#### Check necessary tools
+
+```bash
+npx react-native doctor
+```
+
 ### Fixing Prettierrc and Eslintrc Issues
 
 ## Prettierrc.js
@@ -30,6 +42,24 @@ module.exports = {
   },
 };
 
+```
+
+#### For navigation specific version (react native 0.73.6)
+
+```bash
+yarn add @react-navigation/native @react-navigation/stack react-native-gesture-handler@2.18.0 react-native-reanimated@3.16.7 react-native-safe-area-context@4.9.0 react-native-screens@3.29.0
+```
+
+#### Working CMD
+
+```bash
+rm -rf node_modules
+rm yarn.lock
+cd android
+./gradlew clean
+cd ..
+yarn android
+npx react-native doctor
 ```
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
