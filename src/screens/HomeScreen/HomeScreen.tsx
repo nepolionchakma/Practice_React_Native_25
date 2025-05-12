@@ -4,6 +4,7 @@ import DrawerIcon from '../../Assets/img/menu.png';
 import ProfileIcon from '../../Assets/img/ProfileEmpty.png';
 import Button from '../../components/Button/Button';
 import Categories from '../../components/Categories/Categories';
+import Projects from '../../components/Projects/Projects';
 
 const HomeScreen = () => {
   return (
@@ -20,7 +21,10 @@ const HomeScreen = () => {
         <Text style={styles.TextBold}>Hello, Nepolion</Text>
         <Text style={styles.TextSmall}>Have a nice day</Text>
       </View>
-      <Categories />
+      <View>
+        <Categories />
+        <Projects />
+      </View>
     </View>
   );
 };
