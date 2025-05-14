@@ -1,20 +1,26 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import DrawerIcon from '../../Assets/img/menu.png';
-import ProfileIcon from '../../Assets/img/ProfileEmpty.png';
+// import DrawerIcon from '../../Assets/img/menu.png';
+// import ProfileIcon from '../../Assets/img/ProfileEmpty.png';
 import Button from '../../components/Button/Button';
 import Categories from '../../components/Categories/Categories';
 import Projects from '../../components/Projects/Projects';
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Button style={styles.menuButton}>
-          <Image source={DrawerIcon} style={styles.image} />
+          <Image
+            source={require('../../Assets/img/menu.png')}
+            style={styles.image}
+          />
         </Button>
         <Button style={styles.menuButton}>
-          <Image source={ProfileIcon} style={styles.image} />
+          <Image
+            source={require('../../Assets/img/ProfileEmpty.png')}
+            style={styles.image}
+          />
         </Button>
       </View>
       <View>
@@ -25,7 +31,7 @@ const HomeScreen = () => {
         <Categories />
         <Projects />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
