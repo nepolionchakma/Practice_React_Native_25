@@ -4,7 +4,7 @@ import BackButton from '../../components/BackButton/BackButton';
 import Search from '../../components/Search/Search';
 import {useNavigation} from '@react-navigation/native';
 import DatePickerModal from '../../components/DatePicker/DatePickerModal';
-// import DayOfMonthList from '../../components/DayOfMonthList/DayOfMonthList';
+import DayOfMonthList from '../../components/DayOfMonthList/DayOfMonthList';
 
 const ScheduleTasks = () => {
   const navigate = useNavigation();
@@ -50,6 +50,8 @@ const ScheduleTasks = () => {
           }}>
           <Text style={{color: 'white', textAlign: 'center'}}> Add Task </Text>
         </TouchableOpacity>
+      </View>
+      <View>
         <DatePickerModal
           onClose={() => setIsModalVisible(false)}
           isVisible={isModalVisible}
@@ -59,8 +61,8 @@ const ScheduleTasks = () => {
             setIsModalVisible(false);
           }}
         />
-        {/* <DayOfMonthList date={currentDate} /> */}
       </View>
+      <DayOfMonthList date={currentDate} />
     </View>
   );
 };
